@@ -11,20 +11,20 @@ const path = require('path')
 const fs = require('fs');
 const fileUpload  = require('express-fileupload');
 
-const https = require('https');
-const fs = require('fs');
-const privateKey = fs.readFileSync('key.pem', 'utf8');
-const certificate = fs.readFileSync('cert.pem', 'utf8');
-const credentials = { key: privateKey, cert: certificate };
-const server = https.createServer(credentials, app);
+// const https = require('https');
+// const fs = require('fs');
+// const privateKey = fs.readFileSync('key.pem', 'utf8');
+// const certificate = fs.readFileSync('cert.pem', 'utf8');
+// const credentials = { key: privateKey, cert: certificate };
+// const server = https.createServer(credentials, app);
 
-const io = socketIO(server, {
-    cors: {
-      origin: process.env.CORS_ORIGIN || '*',
-      methods: ['GET', 'POST'],
-      allowedHeaders: ['Content-Type'],
-    },
-});
+// const io = socketIO(server, {
+//     cors: {
+//       origin: process.env.CORS_ORIGIN || '*',
+//       methods: ['GET', 'POST'],
+//       allowedHeaders: ['Content-Type'],
+//     },
+// });
 
 // global.onlineUsers = new Map(); //สร้างตัวแปร global onlineUsers เพื่อเก็บข้อมูลผู้ใช้งานที่ออนไลน์ โดยใช้ Map ในการเก็บข้อมูลดังกล่าว
 // io.on('connection', (socket) => {
