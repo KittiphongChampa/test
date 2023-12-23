@@ -3,13 +3,16 @@ require('dotenv').config()
 
 // Initialize Express
 const app = express();
+app.use(cors());
+
+const Router = require('./routes/router')
 
 // Create GET request
-app.get("/", (req, res) => {
-  res.send("Express on Vercel");
-});
+// app.get("/", (req, res) => {
+//   res.send("Express on Vercel");
+// });
 
-
+app.use(Router)
 
 // Initialize server
 app.listen(5000, () => {
