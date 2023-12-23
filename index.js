@@ -5,7 +5,6 @@ require('dotenv').config()
 let app = express();
 app.use(cors());
 
-const Router = require('./routes/router')
 
 
 
@@ -16,9 +15,8 @@ app.get("/", (req, res) => {
 
 // Initialize server
 
-app.use(Router)
-
 
 app.listen(5000, () => {
   console.log("Running on port 5000.");
 });
+module.exports = app;
